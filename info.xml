@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <extension key="be.aivl.contributionsource" type="module">
   <file>contributionsource</file>
-  <name>FIXME</name>
-  <description>FIXME</description>
+  <name>Campagne in source</name>
+  <description>Toon de naam van de campagne in de source kolom bij het zoeken</description>
   <license>AGPL-3.0</license>
   <maintainer>
     <author>Jaap Jansma</author>
