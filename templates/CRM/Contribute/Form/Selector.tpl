@@ -70,7 +70,7 @@
     {/if}
     </td>
     <td class="crm-contribution-type crm-contribution-type_{$row.financial_type_id} crm-financial-type crm-financial-type_{$row.financial_type_id}">{$row.financial_type}</td>
-    <td class="crm-contribution-source">{$row.campaign}</td>
+    <td class="crm-contribution-source">{$row.campaign|truncate:8:"..."}</td>
     <td class="crm-contribution-receive_date">{$row.receive_date|crmDate}</td>
     <td class="crm-contribution-thankyou_date">{$row.thankyou_date|crmDate}</td>
     <td class="crm-contribution-status">
