@@ -5,16 +5,22 @@
   <description>Toon de naam van de campagne in de source kolom bij het zoeken</description>
   <license>AGPL-3.0</license>
   <maintainer>
-    <author>Jaap Jansma</author>
+    <author>Erik Hommel (CiviCooP)</author>
     <email>helpdesk@civicoop.org</email>
   </maintainer>
-  <releaseDate>2014-03-27</releaseDate>
-  <version>1.0</version>
+  <urls>
+    <url desc="Main Extension Page">https://github.com/CiviCooP/be.aivl.contributionsource</url>
+    <url desc="Documentation">https://github.com/CiviCooP/be.aivl.contributionsource</url>
+    <url desc="Support">https://www.civicoop.org</url>
+    <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2016-04-19</releaseDate>
+  <version>1.1</version>
   <develStage>alpha</develStage>
   <compatibility>
-    <ver>4.2</ver>
+    <ver>4.6</ver>
   </compatibility>
-  <comments>This is a new, undeveloped module</comments>
+  <comments>Extension is stable</comments>
   <civix>
     <namespace>CRM/Contributionsource</namespace>
   </civix>

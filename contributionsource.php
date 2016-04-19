@@ -106,3 +106,24 @@ function contributionsource_civicrm_caseTypes(&$caseTypes) {
 function contributionsource_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
   _contributionsource_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
+function contributionsource_civicrm_searchColumns( $objectName, &$headers, &$rows, &$selector ) {
+  if ($objectName == 'contribution') {
+    foreach ($rows as $rowNum => $row) {
+      try {
+        if (!empty($row['campaign'])) {
+          $rows[$rowNum]['contribution_source'] = substr($row['campaign'], 0, 4).'...';
+          if (!empty($row['contribution_source'])) {
+            $rows[$rowNum]['contribution_source'] .= ' (source '.$row['contribution_source'].')';
+          }
+        }
+      } catch (Exception $ex)
+      {}
+    }
+    foreach ( $headers as $headerId => $header ) {
+      if ( $header['name'] == 'Source' ) {
+        $headers[$headerId]['name'] = 'Campaign (source)';
+        unset( $headers[$headerId]['sort'] );
+      }
+    }
+  }
+}
