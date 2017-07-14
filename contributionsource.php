@@ -120,7 +120,7 @@ function contributionsource_civicrm_searchColumns( $objectName, &$headers, &$row
       {}
     }
     foreach ( $headers as $headerId => $header ) {
-      if ( $header['name'] == 'Source' ) {
+      if (isset($header['name']) && $header['name'] == 'Source' ) {
         $headers[$headerId]['name'] = 'Campaign (source)';
         unset( $headers[$headerId]['sort'] );
       }
